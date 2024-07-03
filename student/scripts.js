@@ -96,13 +96,11 @@ function goHome() {
     document.getElementById('product-dropdown').innerHTML = '<option value="" disabled selected>Select Product</option>'; // Reset product dropdown
     document.getElementById('search-input').value = ''; // Clear search input
 }
-
 // Function to search products based on input
 function searchProducts() {
     const query = document.getElementById('search-input').value.toLowerCase();
     const dropdown = document.getElementById('product-dropdown');
     dropdown.innerHTML = '<option value="" disabled selected>Select Product</option>';
-
     const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
     filteredProducts.forEach(product => {
         const option = document.createElement('option');
@@ -110,15 +108,14 @@ function searchProducts() {
         option.textContent = product.name;
         dropdown.appendChild(option);
     });
-
     if (filteredProducts.length > 0) {
         dropdown.disabled = false;
     } else {
         dropdown.disabled = true;
     }
 }
-
 // Initial setup when the page loads
 window.onload = function () {
     updateProductDropdown(); // Populate product dropdown initially
 };
+// update new for this file
