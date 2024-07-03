@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\\Users\\F5N6\\Downloads\\ct.jpeg" alt="Construction Recommendation Logo">
+        </div>
+        <div class="title">
+            <h1>Construction Recommendation</h1>
+        </div>
+        <div class="home">
+            <button onclick="goHome()">Home</button>
+        </div>
+        <div class="search-bar">
+            <select id="product-group" onchange="updateProductDropdown()">
+                <option value="" disabled selected>Select Product Group</option>
+                <option value="tools">Tools</option>
+                <option value="materials">Materials</option>
+                <option value="hardware">Hardware</option>
+            </select>
+            <select id="product-dropdown" onchange="showProductForm()">
+                <option value="" disabled selected>Select Product</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Search for a product..." oninput="searchProducts()">
+        </div>
+    </header>
+    <main>
+        <section class="welcome" id="home-section">
+            <h2>Welcome to Construction Recommendation</h2>
+            <p>Find the best construction products for your needs.</p>
+        </section>
+        <section class="product-form" id="product-form-section" style="display: none;">
+            <h2>Product Details</h2>
+            <div id="product-details">
+                <!-- Product details will appear here -->
+            </div>
+            <h2>Recommended Products</h2>
+            <div class="product-list recommendation-list" id="recommendations">
+                <!-- Recommendations will appear here -->
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
